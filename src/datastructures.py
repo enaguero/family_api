@@ -19,9 +19,15 @@ class FamilyStructure:
     def _generateId(self):
         return randint(0, 99999999)
 
-    def add_member(self, member):
+    def add_member(self,member):
+
+        final_member = {
+            "id": self._generateId(),
+            "first_name": member["first_name"],
+            "last_name": self.last_name
+        }
         # fill this method and update the return
-        pass
+        self._members.append(final_member)
 
     def delete_member(self, id):
         # fill this method and update the return
